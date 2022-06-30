@@ -1,0 +1,103 @@
+.calendar {
+  place-self: center;
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  // grid-template-columns: 1fr;
+  // align-items: stretch;
+  // justify-items: stretch;
+  gap: 15px;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 16/15;
+  background-color: white;
+  font-size: 1rem;
+  padding: 1.2em 1.7em;
+  border-radius: 12px;
+  box-shadow: 0 0 30px 5px rgba(0 0 0 / 0.2);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+
+    button {
+      aspect-ratio: 1;
+      width: 10%;
+      appearance: none;
+      background-color: #fff;
+      border: 1px solid transparent;
+      // border-radius: 50%;
+      padding: 5px;
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__prev-button {
+    background-image: url('../assets/previous.svg');
+  }
+  &__title {
+    text-transform: uppercase;
+  }
+  &__next-button {
+    background-image: url('../assets/next.svg');
+  }
+
+  &__days {
+    // width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    // grid-template-columns: repeat(auto-fill, minmax(1fr, 50px));
+    grid-template-rows: repeat(6, 1fr);
+    // span {
+    //   display: block;
+    // }
+  }
+
+  &__day {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // &__day:nth-child(8) {
+  //   background-color: gold;
+  //   border-radius: 50%;
+  //   aspect-ratio: 1;
+  // }
+
+  &__day--today {
+    background-color: gold;
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+
+  &__day--week_day {
+    font-weight: 700;
+  }
+  &__day--start-at-1 {
+    grid-column: 1;
+  }
+  &__day--start-at-2 {
+    grid-column: 2;
+  }
+  &__day--start-at-3 {
+    grid-column: 3;
+  }
+  &__day--start-at-4 {
+    grid-column: 4;
+  }
+  &__day--start-at-5 {
+    grid-column: 5;
+  }
+  &__day--start-at-6 {
+    grid-column: 6;
+  }
+  &__day--start-at-7 {
+    grid-column: 7;
+  }
+}
