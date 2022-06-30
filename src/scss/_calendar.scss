@@ -2,9 +2,6 @@
   place-self: center;
   display: grid;
   grid-template-rows: 20% 1fr;
-  // grid-template-columns: 1fr;
-  // align-items: stretch;
-  // justify-items: stretch;
   gap: 15px;
   width: 90%;
   max-width: 400px;
@@ -28,7 +25,6 @@
       appearance: none;
       background-color: #fff;
       border: 1px solid transparent;
-      // border-radius: 50%;
       padding: 5px;
       background-size: 80%;
       background-position: center;
@@ -47,14 +43,9 @@
   }
 
   &__days {
-    // width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    // grid-template-columns: repeat(auto-fill, minmax(1fr, 50px));
     grid-template-rows: repeat(6, 1fr);
-    // span {
-    //   display: block;
-    // }
   }
 
   &__day {
@@ -63,12 +54,6 @@
     justify-content: center;
     align-items: center;
   }
-
-  // &__day:nth-child(8) {
-  //   background-color: gold;
-  //   border-radius: 50%;
-  //   aspect-ratio: 1;
-  // }
 
   &__day--today {
     background-color: gold;
